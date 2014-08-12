@@ -1,14 +1,14 @@
 [sigma]
-name=Sigma Repository for EL7 - $basearch
-baseurl=http://sigmarepo.zamriy.info/repo/EL/7/$basearch
+name=Sigma Repository for EL6 - $basearch
+baseurl=http://sigmarepo.zamriy.info/repo/EL/6/$basearch
 failovermethod=priority
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-SIGMA
 
 [sigma-source]
-name=Sigma Repository for EL7 - $basearch
-baseurl=http://sigmarepo.zamriy.info/repo/EL/7/SRPMS
+name=Sigma Repository for EL6 - $basearch - Source
+baseurl=http://sigmarepo.zamriy.info/repo/EL/6/SRPMS
 failovermethod=priority
 enabled=0
 gpgcheck=1

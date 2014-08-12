@@ -1,8 +1,9 @@
 Name:           sigma-release
-Version:        7
+Version:        6
 Release:        1%{?dist}
 Summary:        Sigma repository configuration
 
+Packager:       Eugene Zamriy <eugene@zamriy.info>
 License:        GPLv2
 
 Group:          System Environment/Base
@@ -14,6 +15,8 @@ Source1:        sigma.repo
 BuildArch:      noarch
 
 Requires:       redhat-release >= %{version}
+Requires:       epel-release >= %{version}
+Conflicts:      fedora-release
 
 
 %description
@@ -42,7 +45,6 @@ This package contains the Sigma repository GPG key and configuration for yum.
 %config(noreplace) /etc/yum.repos.d/*
 /etc/pki/rpm-gpg/*
 
-
 %changelog
-* Tue Aug 12 2014 Eugene G. Zamriy <eugene@zamriy.info> - 7-1
-- Initial release
+* Sun Jul  7 2013 Eugene G. Zamriy <eugene@zamriy.info> - 6-1
+- initial release

@@ -1,6 +1,6 @@
 Name:           sigma-release
 Version:        7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Sigma repository configuration
 
 License:        GPLv2
@@ -44,5 +44,8 @@ This package contains the Sigma repository GPG key and configuration for yum.
 
 
 %changelog
+* Fri Aug 15 2014 Eugene G. Zamriy <eugene@zamriy.info> - 7-2
+- Debuginfo repository added.
+
 * Tue Aug 12 2014 Eugene G. Zamriy <eugene@zamriy.info> - 7-1
 - Initial release

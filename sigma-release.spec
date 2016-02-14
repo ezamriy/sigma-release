@@ -1,5 +1,5 @@
 Name:           sigma-release
-Version:        6
+Version:        5
 Release:        1%{?dist}
 Summary:        Sigma repository configuration
 
@@ -9,9 +9,10 @@ License:        GPLv2
 Group:          System Environment/Base
 URL:            http://sigmarepo.zamriy.info/
 
-Source0:        http://sigmarepo.zamriy.info/repo/RPM-GPG-KEY-SIGMA
+Source0:        http://sigmarepo.zamriy.info/repo/RPM-GPG-KEY-SIGMA-5
 Source1:        sigma.repo
 
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
 
 Requires:       redhat-release >= %{version}
@@ -33,7 +34,7 @@ This package contains the Sigma repository GPG key and configuration for yum.
 %install
 %{__rm} -rf %{buildroot}
 %{__install} -Dpm 644 %{SOURCE0} \
-             %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SIGMA
+             %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-SIGMA-5
 %{__install} -dm 755 %{buildroot}%{_sysconfdir}/yum.repos.d
 %{__install} -pm 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d
 
@@ -46,5 +47,5 @@ This package contains the Sigma repository GPG key and configuration for yum.
 /etc/pki/rpm-gpg/*
 
 %changelog
-* Sun Jul  7 2013 Eugene G. Zamriy <eugene@zamriy.info> - 6-1
+* Sun Feb 14 2016 Eugene Zamriy <eugene@zamriy.info> - 5-1
 - initial release
